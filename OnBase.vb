@@ -1,0 +1,108 @@
+﻿Imports System.IO
+Imports System.Net.Mail
+
+Module OnBase
+    
+
+    Sub Main()
+        Dim fecha1 As Date = Date.Now
+        recursivoDir(My.Settings.RutaOrigen)
+        LLenaSQL()
+        Dim fecha2 As Date = Date.Now
+        Dim x As Long = DateDiff(DateInterval.Minute, fecha1, fecha2)
+        Console.WriteLine("Minutos: {0}", x)
+    End Sub
+
+    Private Sub recursivoDir(ByVal elDirectorio As String)
+        Console.WriteLine("Los subdirectorios de {0}", elDirectorio)
+        recorrerDir(elDirectorio, 0)
+    End Sub
+
+    Private Sub recorrerDir(ByVal elDir As String, ByVal nivel As Integer)
+        ' La sangría del nivel examinado
+        Try
+
+        
+        Dim sangria As String = New String(" "c, nivel)
+        Dim RutaNueva As String = My.Settings.RutaDestino
+        Dim infoReader1 As System.IO.FileInfo
+            Dim infoReader2 As System.IO.FileInfo
+            Dim r As String = ""
+            Dim rr As String = ""
+
+
+        ' Los subdirectorios del directorio indicado
+        Dim directorios As String() = Directory.GetDirectories(elDir)
+        Console.Write("{0}Directorio {1} con {2} subdirectorios", sangria, elDir, directorios.Length)
+        Dim ficheros As String() = Directory.GetFiles(elDir)
+        Console.WriteLine(" y {0} ficheros", ficheros.Length)
+
+        ' Si tiene subdirectorios, recorrerlos
+        If directorios.Length > 0 Then
+            For Each d As String In directorios
+                ' Llamar de forma recursiva a este mismo método
+                    'crea las carpetas
+                    r = RutaNueva & Mid(d, 21, d.Length)
+                    If Not Directory.Exists(r) Then
+                        Directory.CreateDirectory(r)
+                    End If
+                recorrerDir(d, nivel + 2)
+            Next
+        End If
+
+        ' Si tiene archivos, recorrerlos
+        If ficheros.Length > 0 Then
+            For Each f As String In ficheros
+                'copia los archivos
+                    If InStr(UCase(f), ".JPG") > 0 Or InStr(UCase(f), ".TIF") > 0 Or InStr(UCase(f), ".PDF") > 0 Then
+                        rr = RutaNueva & Mid(f, 21, f.Length)
+                        If Not File.Exists(rr) Then
+                            File.Copy(f, rr, True)
+                        Else
+                            infoReader1 = My.Computer.FileSystem.GetFileInfo(f)
+                            infoReader2 = My.Computer.FileSystem.GetFileInfo(rr)
+                            If infoReader1.Length <> infoReader2.Length Then
+                                File.Copy(f, rr, True)
+                            End If
+                        End If
+                    End If
+                Console.WriteLine("       Ficheros: {0}", f)
+            Next
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            EnviaError("Ecacerest@lamoderna.com.mx", ex.Message, "Error de Onbase " & Date.Now)
+        End Try
+    End Sub
+
+    Private Sub LLenaSQL()
+        Try
+            Dim taOnBase As New OnBaseDSTableAdapters.DatosOnBaseTableAdapter
+            Dim ta As New FinagilDSTableAdapters.OnBaseTableAdapter
+            Dim t As New OnBaseDS.DatosOnBaseDataTable
+            ta.DeleteAll()
+            taOnBase.Fill(t)
+            For Each r As OnBaseDS.DatosOnBaseRow In t.Rows
+                ta.Insert(r.itemnum, r.itemname, r.itemdate, r.itempagenum, r.filepath)
+                Console.WriteLine(r.itemnum)
+            Next
+            ta.DeleteNoImagenes()
+        Catch ex As Exception
+            EnviaError("Ecacerest@lamoderna.com.mx", ex.Message, "error de Onbase")
+        End Try
+    End Sub
+
+    Private Sub EnviaError(ByVal Para As String, ByVal Mensaje As String, ByVal Asunto As String)
+        If InStr(Mensaje, Asunto) = 0 Then
+            Dim Mensage As New MailMessage("InternoBI2008@cmoderna.com", Trim(Para), Trim(Asunto), Mensaje)
+            Dim Cliente As New SmtpClient("smtp01.cmoderna.com", 26)
+            Try
+                Cliente.Send(Mensage)
+            Catch ex As Exception
+                'ReportError(ex)
+            End Try
+        Else
+            Console.WriteLine("No se ha encontrado la ruta de acceso de la red")
+        End If
+    End Sub
+End Module
