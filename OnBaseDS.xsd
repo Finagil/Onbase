@@ -31,7 +31,20 @@ WHERE        (hsi.useraccount.realname LIKE '%Finagil%') AND (hsi.itemdata.itemd
               <Mapping SourceColumn="batchnum" DataSetColumn="batchnum" />
               <Mapping SourceColumn="status" DataSetColumn="status" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="onbase02.Onbase.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByTODO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTODO" GeneratorSourceName="FillByTODO" GetMethodModifier="Public" GetMethodName="GetDataByTODO" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTODO" UserSourceName="FillByTODO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hsi.itemdata.itemnum, hsi.itemdata.itemname, hsi.itemdata.itemdate, hsi.itemdatapage.itempagenum, hsi.itemdatapage.filepath, hsi.itemdata.batchnum, hsi.itemdata.status
+FROM            hsi.itemdatapage INNER JOIN
+                         hsi.itemdata ON hsi.itemdatapage.itemnum = hsi.itemdata.itemnum INNER JOIN
+                         hsi.useraccount ON hsi.itemdata.usernum = hsi.useraccount.usernum
+WHERE        (hsi.useraccount.realname LIKE '%Finagil%') AND (hsi.itemdata.batchnum &gt;= 0) AND (hsi.itemdata.status = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -41,7 +54,7 @@ WHERE        (hsi.useraccount.realname LIKE '%Finagil%') AND (hsi.itemdata.itemd
   <xs:element name="OnBaseDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OnBaseDS" msprop:Generator_UserDSName="OnBaseDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DatosOnBase" msprop:Generator_TableClassName="DatosOnBaseDataTable" msprop:Generator_TableVarName="tableDatosOnBase" msprop:Generator_TablePropName="DatosOnBase" msprop:Generator_RowDeletingName="DatosOnBaseRowDeleting" msprop:Generator_RowChangingName="DatosOnBaseRowChanging" msprop:Generator_RowEvHandlerName="DatosOnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosOnBaseRowDeleted" msprop:Generator_UserTableName="DatosOnBase" msprop:Generator_RowChangedName="DatosOnBaseRowChanged" msprop:Generator_RowEvArgName="DatosOnBaseRowChangeEvent" msprop:Generator_RowClassName="DatosOnBaseRow">
+        <xs:element name="DatosOnBase" msprop:Generator_TableClassName="DatosOnBaseDataTable" msprop:Generator_TableVarName="tableDatosOnBase" msprop:Generator_RowChangedName="DatosOnBaseRowChanged" msprop:Generator_TablePropName="DatosOnBase" msprop:Generator_RowDeletingName="DatosOnBaseRowDeleting" msprop:Generator_RowChangingName="DatosOnBaseRowChanging" msprop:Generator_RowEvHandlerName="DatosOnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosOnBaseRowDeleted" msprop:Generator_RowClassName="DatosOnBaseRow" msprop:Generator_UserTableName="DatosOnBase" msprop:Generator_RowEvArgName="DatosOnBaseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemnum" msprop:Generator_ColumnVarNameInTable="columnitemnum" msprop:Generator_ColumnPropNameInRow="itemnum" msprop:Generator_ColumnPropNameInTable="itemnumColumn" msprop:Generator_UserColumnName="itemnum" type="xs:int" minOccurs="0" />

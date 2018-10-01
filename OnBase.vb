@@ -2,12 +2,20 @@
 Imports System.Net.Mail
 
 Module OnBase
-    
-
+    Dim Arg() As String
     Sub Main()
         Dim fecha1 As Date = Date.Now
-        recursivoDir(My.Settings.RutaOrigen)
-        LLenaSQL()
+        Arg = Environment.GetCommandLineArgs()
+        If Arg.Length > 1 Then
+            recursivoDir(My.Settings.RutaOrigen)
+            Select Case Val(Arg(1))
+                Case 0
+                    LLenaSQL(False)
+                Case 1
+                    LLenaSQL(True)
+            End Select
+        End If
+
         Dim fecha2 As Date = Date.Now
         Dim x As Long = DateDiff(DateInterval.Minute, fecha1, fecha2)
         Console.WriteLine("Minutos: {0}", x)
@@ -75,13 +83,19 @@ Module OnBase
         End Try
     End Sub
 
-    Private Sub LLenaSQL()
+    Private Sub LLenaSQL(Todo As Boolean)
         Try
             Dim taOnBase As New OnBaseDSTableAdapters.DatosOnBaseTableAdapter
             Dim ta As New FinagilDSTableAdapters.OnBaseTableAdapter
             Dim t As New OnBaseDS.DatosOnBaseDataTable
-            ta.DeleteAll()
-            taOnBase.Fill(t)
+            If Todo = True Then
+                ta.DeleteTODO()
+                taOnBase.FillByTODO(t)
+            Else
+                ta.DeleteAll()
+                taOnBase.Fill(t)
+            End If
+
             For Each r As OnBaseDS.DatosOnBaseRow In t.Rows
                 ta.Insert(r.itemnum, r.itemname, r.itemdate, r.itempagenum, r.filepath)
                 Console.WriteLine(r.itemnum)
