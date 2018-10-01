@@ -87,6 +87,7 @@ Module OnBase
                 Console.WriteLine(r.itemnum)
             Next
             ta.DeleteNoImagenes()
+            ta.UpdateDocumentos()
         Catch ex As Exception
             EnviaError("Ecacerest@lamoderna.com.mx", ex.Message, "error de Onbase")
         End Try

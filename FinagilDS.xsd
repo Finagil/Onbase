@@ -102,6 +102,71 @@ WHERE        (NOT (filepath LIKE '%.tif') AND NOT (filepath LIKE '%.pdf') AND NO
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateDocumentos" Modifier="Public" Name="UpdateDocumentos" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateDocumentos">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>update onbase set Documento= 'FACTURA OBJETO FINANCIADO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- OBJ%' and Documento is null;
+update onbase set Documento= 'FACTURA GARANTIA' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- GTIA%' and Documento is null;
+update onbase set Documento= 'ESTIMACION DE VALOR' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- EST%' and Documento is null;
+update onbase set Documento= 'AVALUO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AVA%' and Documento is null;
+update onbase set Documento= 'FORMATO PLD' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- PLD%' and Documento is null;
+update onbase set Documento= 'IDENTIFICACION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- ID%' and Documento is null;
+update onbase set Documento= 'AUTORIZACION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AUT%' and Documento is null;
+update onbase set Documento= 'PAGARE' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- PAG%' and Documento is null;
+update onbase set Documento= 'CONTRATO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CTO%' and Documento is null;
+update onbase set Documento= 'CONTRATO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CONT%' and Documento is null;
+update onbase set Documento= 'CONVENIO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CONV%' and Documento is null;
+update onbase set Documento= 'ESCRITURA' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- ESC%' and Documento is null;
+update onbase set Documento= 'HOJA DE CAMBIOS' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- HC%' and Documento is null;
+update onbase set Documento= 'TRAMITE DE PLACAS' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- TRAM%' and Documento is null;
+update onbase set Documento= 'SEGURO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- SG%' and Documento is null;
+update onbase set Documento= 'HIPOTECA' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- HIP%' and Documento is null;
+update onbase set Documento= 'HOJA DE DISPOSICION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- Hd%' and Documento is null;
+update onbase set Documento= 'FORMATO DE MINISTRACIONES' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- fm%' and Documento is null;
+update onbase set Documento= 'AUTORIZACION DE CREDITO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- ACRED%' and Documento is null;
+update onbase set Documento= 'COMERCIALIZACION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- COMER%' and Documento is null;
+update onbase set Documento= 'FORMATOS PLD' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- fld%' and Documento is null;
+update onbase set Documento= 'ANTICIPO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- ANT PAG%' and Documento is null;
+
+
+update onbase set Documento= 'CHECK LIST PLD' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- chk list pld%' and Documento is null;
+update onbase set Documento= 'CHECK LIST CREDITO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- chk list CRED%' and Documento is null;
+update onbase set Documento= 'CEDULA DE IDENTIFICACION FISCAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CIDF%' and Documento is null;
+update onbase set Documento= 'RFC' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RFC%' and Documento is null;
+update onbase set Documento= 'FIRMA ELECTRONICA' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- FIEL%' and Documento is null;
+update onbase set Documento= 'VERIFICACION PLD' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- VE PLD%' and Documento is null;
+
+update onbase set Documento= 'IDENTIFICACION DEL CLIENTE' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id %' and Documento is null;
+update onbase set Documento= 'IDENTIFICACION ACREDITADO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id-A%' and Documento is null;
+update onbase set Documento= 'IDENTIFICACION REPRESENTATE LEGAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id-RL%' and Documento is null;
+update onbase set Documento= 'IDENTIFICACION OBIGADO SOLIDARIO Y AVAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id-OS%' and Documento is null;
+
+update onbase set Documento= 'CURP DEL CLIENTE' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP %' and Documento is null;
+update onbase set Documento= 'CURP ACREDITADO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-A%' and Documento is null;
+update onbase set Documento= 'CURP REPRESENTATE LEGAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-RL%' and Documento is null;
+update onbase set Documento= 'CURP OBIGADO SOLIDARIO Y AVAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-OS%' and Documento is null;
+
+update onbase set Documento= 'COMPROBANTE DE DOMICILIO CLIENTE' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CD %' and Documento is null;
+update onbase set Documento= 'COMPROBANTE DE DOMICILIO ACREDITADO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CD-A%' and Documento is null;
+update onbase set Documento= 'COMPROBANTE DE DOMICILIO REPRESENTANTE LEGAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CD-RL%' and Documento is null;
+update onbase set Documento= 'COMPROBANTE DE DOMICILIO OBIGADO SOLIDARIO Y AVAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CD-OS%' and Documento is null;
+
+update onbase set Documento= 'AUTORIZACION' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- AUT%' and Documento is null;
+update onbase set Documento= 'SOLICITUD DE CREDITO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- SOLF%' and Documento is null;
+update onbase set Documento= 'REPORTE DE VISITA' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RPT VIST%' and Documento is null;
+update onbase set Documento= 'BURO DE CREDITO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- BC%' and Documento is null;
+update onbase set Documento= 'VERIFICACIONES DE SOCIEDAD' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- VE SOC%' and Documento is null;
+update onbase set Documento= 'VERIFICACIONES DE PROPIEDAD' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- VE PROP%' and Documento is null;
+update onbase set Documento= 'ACTA CONSTITUTIVA' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- AC%' and Documento is null;
+update onbase set Documento= 'MODIFICACIONES ACTA CONSTITUTIVA' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- MAC%' and Documento is null;
+update onbase set Documento= 'PODERES' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- PODERES%' and Documento is null;
+update onbase set Documento= 'RELACION PATRIMONIAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RP%' and Documento is null;
+update onbase set Documento= 'AVALUOS' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- AVALUO%' and Documento is null;
+update onbase set Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- EDO FIN%' and Documento is null;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
         </Tables>
@@ -112,7 +177,7 @@ WHERE        (NOT (filepath LIKE '%.tif') AND NOT (filepath LIKE '%.pdf') AND NO
   <xs:element name="FinagilDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FinagilDS" msprop:Generator_UserDSName="FinagilDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent" msprop:Generator_RowClassName="OnBaseRow">
+        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_RowClassName="OnBaseRow" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemnum" msprop:Generator_ColumnVarNameInTable="columnitemnum" msprop:Generator_ColumnPropNameInRow="itemnum" msprop:Generator_ColumnPropNameInTable="itemnumColumn" msprop:Generator_UserColumnName="itemnum" type="xs:decimal" minOccurs="0" />
