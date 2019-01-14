@@ -7,13 +7,13 @@ Module OnBase
         Dim fecha1 As Date = Date.Now
         Arg = Environment.GetCommandLineArgs()
         If Arg.Length > 1 Then
-            recursivoDir(My.Settings.RutaOrigen)
             Select Case Val(Arg(1))
                 Case 0
                     LLenaSQL(False)
                 Case 1
                     LLenaSQL(True)
             End Select
+            recursivoDir(My.Settings.RutaOrigen)
         End If
 
         Dim fecha2 As Date = Date.Now
