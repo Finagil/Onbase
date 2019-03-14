@@ -1029,8 +1029,9 @@ Namespace FinagilDSTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "DELETE FROM OnBase"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (NOT (filepath LIKE '%.tif') AND NOT (filepath L"& _ 
-                "IKE '%.pdf') AND NOT (filepath LIKE '%.jpg'))"
+            Me._commandCollection(2).CommandText = "DELETE FROM OnBase"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (NOT (filepath LIKE '%.tif')) AND (NOT (filepath"& _ 
+                " LIKE '%.pdf')) AND (NOT (filepath LIKE '%.jpg')) AND (NOT (filepath LIKE '%.TIF"& _ 
+                "F'))"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection

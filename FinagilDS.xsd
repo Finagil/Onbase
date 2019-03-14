@@ -97,7 +97,7 @@ WHERE        (itemdate &gt;= GETDATE() - 15)</CommandText>
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM OnBase
-WHERE        (NOT (filepath LIKE '%.tif') AND NOT (filepath LIKE '%.pdf') AND NOT (filepath LIKE '%.jpg'))</CommandText>
+WHERE        (NOT (filepath LIKE '%.tif')) AND (NOT (filepath LIKE '%.pdf')) AND (NOT (filepath LIKE '%.jpg')) AND (NOT (filepath LIKE '%.TIFF'))</CommandText>
                     <Parameters />
                   </DbCommand>
                 </DeleteCommand>
@@ -187,7 +187,7 @@ update onbase set Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO 
   <xs:element name="FinagilDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FinagilDS" msprop:Generator_UserDSName="FinagilDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent" msprop:Generator_RowClassName="OnBaseRow">
+        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_RowClassName="OnBaseRow" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemnum" msprop:Generator_ColumnVarNameInTable="columnitemnum" msprop:Generator_ColumnPropNameInRow="itemnum" msprop:Generator_ColumnPropNameInTable="itemnumColumn" msprop:Generator_UserColumnName="itemnum" type="xs:decimal" minOccurs="0" />
