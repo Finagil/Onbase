@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="RutaDestino" Type="System.String" Scope="User">
-      <Value Profile="(Default)">M:\</Value>
+      <Value Profile="(Default)">\\SERVER-NAS\OnBase\</Value>
     </Setting>
     <Setting Name="RutaOrigen" Type="System.String" Scope="User">
-      <Value Profile="(Default)">O:\</Value>
+      <Value Profile="(Default)">\\onbase02\Creditos\</Value>
     </Setting>
   </Settings>
 </SettingsFile>

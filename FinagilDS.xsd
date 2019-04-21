@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection ConnectionStringObject="Data Source=server-raid;Initial Catalog=Production;Persist Security Info=True;User ID=User_PRO;Password=User_PRO2015" IsAppSettingsProperty="false" Modifier="Assembly" Name="server-raid.Production.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=server-raid2;Initial Catalog=Production;Persist Security Info=True;User ID=User_PRO" IsAppSettingsProperty="false" Modifier="Assembly" Name="server-raid.Production.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OnBaseTableAdapter" GeneratorDataComponentClassName="OnBaseTableAdapter" Name="OnBase" UserDataComponentName="OnBaseTableAdapter">
@@ -187,7 +187,7 @@ update onbase set Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO 
   <xs:element name="FinagilDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FinagilDS" msprop:Generator_UserDSName="FinagilDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_RowClassName="OnBaseRow" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent">
+        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent" msprop:Generator_RowClassName="OnBaseRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemnum" msprop:Generator_ColumnVarNameInTable="columnitemnum" msprop:Generator_ColumnPropNameInRow="itemnum" msprop:Generator_ColumnPropNameInTable="itemnumColumn" msprop:Generator_UserColumnName="itemnum" type="xs:decimal" minOccurs="0" />
