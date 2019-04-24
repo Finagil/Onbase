@@ -110,7 +110,7 @@ Module OnBase
     Private Sub EnviaError(ByVal Para As String, ByVal Mensaje As String, ByVal Asunto As String)
         If InStr(Mensaje, Asunto) = 0 Then
             Dim Mensage As New MailMessage("InternoBI2008@cmoderna.com", Trim(Para), Trim(Asunto), Mensaje)
-            Dim Cliente As New SmtpClient("smtp01.cmoderna.com", 26)
+            Dim Cliente As New SmtpClient("192.168.110.1", 25)
             Try
                 Cliente.Send(Mensage)
             Catch ex As Exception

@@ -1011,7 +1011,7 @@ Namespace FinagilDSTableAdapters
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
             Me._connection.ConnectionString = "Data Source=server-raid2;Initial Catalog=Production;Persist Security Info=True;Us"& _ 
-                "er ID=User_PRO"
+                "er ID=User_PRO;Password=User_PRO2015"
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
