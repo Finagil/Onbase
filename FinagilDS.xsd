@@ -121,7 +121,7 @@ update onbase set Documento= 'ESTIMACION DE VALOR' where itemname like 'Mesa de 
 update onbase set Documento= 'AVALUO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AVA%' and Documento is null;
 update onbase set Documento= 'FORMATO PLD' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- PLD%' and Documento is null;
 update onbase set Documento= 'IDENTIFICACION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- ID %' and Documento is null;
-update onbase set Documento= 'AUTORIZACION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AUT%' and Documento is null;
+update onbase set Documento= 'AUTORIZACION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AUT' and Documento is null;
 update onbase set Documento= 'PAGARE' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- PAG%' and Documento is null;
 update onbase set Documento= 'CONTRATO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CTO%' and Documento is null;
 update onbase set Documento= 'CONTRATO' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CONT%' and Documento is null;
@@ -161,7 +161,7 @@ update onbase set Documento= 'COMPROBANTE DE DOMICILIO ACREDITADO' where itemnam
 update onbase set Documento= 'COMPROBANTE DE DOMICILIO REPRESENTANTE LEGAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CD-RL%' and Documento is null;
 update onbase set Documento= 'COMPROBANTE DE DOMICILIO OBIGADO SOLIDARIO Y AVAL' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CD-OS%' and Documento is null;
 
-update onbase set Documento= 'AUTORIZACION' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- AUT%' and Documento is null;
+update onbase set Documento= 'AUTORIZACION' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- AUT %' and Documento is null;
 update onbase set Documento= 'SOLICITUD DE CREDITO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- SOLF%' and Documento is null;
 update onbase set Documento= 'REPORTE DE VISITA' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RPT VIST%' and Documento is null;
 update onbase set Documento= 'BURO DE CREDITO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- BC%' and Documento is null;
@@ -187,7 +187,7 @@ update onbase set Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO 
   <xs:element name="FinagilDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FinagilDS" msprop:Generator_UserDSName="FinagilDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_RowClassName="OnBaseRow" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent">
+        <xs:element name="OnBase" msprop:Generator_TableClassName="OnBaseDataTable" msprop:Generator_TableVarName="tableOnBase" msprop:Generator_TablePropName="OnBase" msprop:Generator_RowDeletingName="OnBaseRowDeleting" msprop:Generator_RowChangingName="OnBaseRowChanging" msprop:Generator_RowEvHandlerName="OnBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="OnBaseRowDeleted" msprop:Generator_UserTableName="OnBase" msprop:Generator_RowChangedName="OnBaseRowChanged" msprop:Generator_RowEvArgName="OnBaseRowChangeEvent" msprop:Generator_RowClassName="OnBaseRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemnum" msprop:Generator_ColumnVarNameInTable="columnitemnum" msprop:Generator_ColumnPropNameInRow="itemnum" msprop:Generator_ColumnPropNameInTable="itemnumColumn" msprop:Generator_UserColumnName="itemnum" type="xs:decimal" minOccurs="0" />

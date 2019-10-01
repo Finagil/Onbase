@@ -1051,66 +1051,68 @@ Namespace FinagilDSTableAdapters
                 "ntrol -%' and ITEMNAME LIKE '%- PLD%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set "& _ 
                 "Documento= 'IDENTIFICACION' where itemname like 'Mesa de control -%' and ITEMNAM"& _ 
                 "E LIKE '%- ID %' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'AUTORIZAC"& _ 
-                "ION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AUT%' and Do"& _ 
-                "cumento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'PAGARE' where itemname like 'Mes"& _ 
-                "a de control -%' and ITEMNAME LIKE '%- PAG%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onba"& _ 
-                "se set Documento= 'CONTRATO' where itemname like 'Mesa de control -%' and ITEMNA"& _ 
-                "ME LIKE '%- CTO%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CONTRATO"& _ 
-                "' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CONT%' and Docu"& _ 
-                "mento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CONVENIO' where itemname like 'Mes"& _ 
-                "a de control -%' and ITEMNAME LIKE '%- CONV%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onb"& _ 
-                "ase set Documento= 'ESCRITURA' where itemname like 'Mesa de control -%' and ITEM"& _ 
-                "NAME LIKE '%- ESC%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'HOJA D"& _ 
-                "E CAMBIOS' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- HC%' a"& _ 
-                "nd Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'TRAMITE DE PLACAS' where it"& _ 
-                "emname like 'Mesa de control -%' and ITEMNAME LIKE '%- TRAM%' and Documento is n"& _ 
-                "ull;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'SEGURO' where itemname like 'Mesa de control"& _ 
-                " -%' and ITEMNAME LIKE '%- SG%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Docume"& _ 
-                "nto= 'HIPOTECA' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- H"& _ 
-                "IP%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'HOJA DE DISPOSICION' "& _ 
-                "where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- Hd%' and Document"& _ 
-                "o is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'FORMATO DE MINISTRACIONES' where itemn"& _ 
-                "ame like 'Mesa de control -%' and ITEMNAME LIKE '%- fm%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'AUTORIZACION DE CREDITO' where itemname like 'Mes"& _ 
-                "a de control -%' and ITEMNAME LIKE '%- ACRED%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update on"& _ 
-                "base set Documento= 'COMERCIALIZACION' where itemname like 'Mesa de control -%' "& _ 
-                "and ITEMNAME LIKE '%- COMER%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Document"& _ 
-                "o= 'FORMATOS PLD' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%-"& _ 
-                " fld%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'ANTICIPO' where ite"& _ 
-                "mname like 'Mesa de control -%' and ITEMNAME LIKE '%- ANT PAG%' and Documento is"& _ 
-                " null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CHECK LIST PLD' where itemname like 'C"& _ 
-                "REDITO -%' and ITEMNAME LIKE '%- chk list pld%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update o"& _ 
-                "nbase set Documento= 'CHECK LIST CREDITO' where itemname like 'CREDITO -%' and I"& _ 
-                "TEMNAME LIKE '%- chk list CRED%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Docum"& _ 
-                "ento= 'CEDULA DE IDENTIFICACION FISCAL' where itemname like 'CREDITO -%' and ITE"& _ 
-                "MNAME LIKE '%- CIDF%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'RFC'"& _ 
-                " where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RFC%' and Documento is n"& _ 
-                "ull;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'FIRMA ELECTRONICA' where itemname like 'CRED"& _ 
-                "ITO -%' and ITEMNAME LIKE '%- FIEL%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set D"& _ 
-                "ocumento= 'VERIFICACION PLD' where itemname like 'CREDITO -%' and ITEMNAME LIKE "& _ 
-                "'%- VE PLD%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'IDENTIFICAC"& _ 
-                "ION DEL CLIENTE' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id %' an"& _ 
-                "d Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'IDENTIFICACION ACREDITADO' w"& _ 
-                "here itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id-A%' and Documento is nu"& _ 
-                "ll;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'IDENTIFICACION REPRESENTATE LEGAL' where item"& _ 
-                "name like 'CREDITO -%' and ITEMNAME LIKE '%- id-RL%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"upd"& _ 
-                "ate onbase set Documento= 'IDENTIFICACION OBIGADO SOLIDARIO Y AVAL' where itemna"& _ 
-                "me like 'CREDITO -%' and ITEMNAME LIKE '%- id-OS%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"upd"& _ 
-                "ate onbase set Documento= 'CURP DEL CLIENTE' where itemname like 'CREDITO -%' an"& _ 
-                "d ITEMNAME LIKE '%- CURP %' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento="& _ 
-                " 'CURP ACREDITADO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-A"& _ 
-                "%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CURP REPRESENTATE LEGAL"& _ 
-                "' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-RL%' and Documento"& _ 
-                " is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CURP OBIGADO SOLIDARIO Y AVAL' where it"& _ 
-                "emname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-OS%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'COMPROBANTE DE DOMICILIO CLIENTE' where itemnam"& _ 
-                "e like 'CREDITO -%' and ITEMNAME LIKE '%- CD %' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update o"& _ 
-                "nbase set Documento= 'COMPROBANTE DE DOMICILIO ACREDITADO' where itemname like '"& _ 
-                "CREDITO -%' and ITEMNAME LIKE '%- CD-A%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase s"& _ 
-                "et Documento= 'COMPROBANTE DE DOMICILIO REPRESENTANTE LEGAL' where itemname like"& _ 
-                " 'CREDITO -%' and ITEMNAME LIKE '%- CD-RL%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbas"& _ 
-                "e set Documento= 'COMPROBANTE DE DOMICILIO OBIGADO SOLIDARIO Y AVAL' where itemn"& _ 
-                "ame like 'CREDITO -%' and ITEMNAME LIKE '%- CD-OS%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"up"& _ 
-                "date onbase set Documento= 'AUTORIZACION' where itemname like 'CREDITO -%' and I"& _ 
-                "TEMNAME LIKE '%- AUT%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'SOL"& _ 
+                "ION' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- AUT' and Doc"& _ 
+                "umento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'PAGARE' where itemname like 'Mesa"& _ 
+                " de control -%' and ITEMNAME LIKE '%- PAG%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbas"& _ 
+                "e set Documento= 'CONTRATO' where itemname like 'Mesa de control -%' and ITEMNAM"& _ 
+                "E LIKE '%- CTO%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CONTRATO'"& _ 
+                " where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- CONT%' and Docum"& _ 
+                "ento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CONVENIO' where itemname like 'Mesa"& _ 
+                " de control -%' and ITEMNAME LIKE '%- CONV%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onba"& _ 
+                "se set Documento= 'ESCRITURA' where itemname like 'Mesa de control -%' and ITEMN"& _ 
+                "AME LIKE '%- ESC%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'HOJA DE"& _ 
+                " CAMBIOS' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- HC%' an"& _ 
+                "d Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'TRAMITE DE PLACAS' where ite"& _ 
+                "mname like 'Mesa de control -%' and ITEMNAME LIKE '%- TRAM%' and Documento is nu"& _ 
+                "ll;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'SEGURO' where itemname like 'Mesa de control "& _ 
+                "-%' and ITEMNAME LIKE '%- SG%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documen"& _ 
+                "to= 'HIPOTECA' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- HI"& _ 
+                "P%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'HOJA DE DISPOSICION' w"& _ 
+                "here itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- Hd%' and Documento"& _ 
+                " is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'FORMATO DE MINISTRACIONES' where itemna"& _ 
+                "me like 'Mesa de control -%' and ITEMNAME LIKE '%- fm%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "update onbase set Documento= 'AUTORIZACION DE CREDITO' where itemname like 'Mesa"& _ 
+                " de control -%' and ITEMNAME LIKE '%- ACRED%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onb"& _ 
+                "ase set Documento= 'COMERCIALIZACION' where itemname like 'Mesa de control -%' a"& _ 
+                "nd ITEMNAME LIKE '%- COMER%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento"& _ 
+                "= 'FORMATOS PLD' where itemname like 'Mesa de control -%' and ITEMNAME LIKE '%- "& _ 
+                "fld%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'ANTICIPO' where item"& _ 
+                "name like 'Mesa de control -%' and ITEMNAME LIKE '%- ANT PAG%' and Documento is "& _ 
+                "null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CHECK LIST PLD' where itemname like 'CR"& _ 
+                "EDITO -%' and ITEMNAME LIKE '%- chk list pld%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update on"& _ 
+                "base set Documento= 'CHECK LIST CREDITO' where itemname like 'CREDITO -%' and IT"& _ 
+                "EMNAME LIKE '%- chk list CRED%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Docume"& _ 
+                "nto= 'CEDULA DE IDENTIFICACION FISCAL' where itemname like 'CREDITO -%' and ITEM"& _ 
+                "NAME LIKE '%- CIDF%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'RFC' "& _ 
+                "where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RFC%' and Documento is nu"& _ 
+                "ll;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'FIRMA ELECTRONICA' where itemname like 'CREDI"& _ 
+                "TO -%' and ITEMNAME LIKE '%- FIEL%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Do"& _ 
+                "cumento= 'VERIFICACION PLD' where itemname like 'CREDITO -%' and ITEMNAME LIKE '"& _ 
+                "%- VE PLD%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'IDENTIFICACI"& _ 
+                "ON DEL CLIENTE' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id %' and"& _ 
+                " Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'IDENTIFICACION ACREDITADO' wh"& _ 
+                "ere itemname like 'CREDITO -%' and ITEMNAME LIKE '%- id-A%' and Documento is nul"& _ 
+                "l;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'IDENTIFICACION REPRESENTATE LEGAL' where itemn"& _ 
+                "ame like 'CREDITO -%' and ITEMNAME LIKE '%- id-RL%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"upda"& _ 
+                "te onbase set Documento= 'IDENTIFICACION OBIGADO SOLIDARIO Y AVAL' where itemnam"& _ 
+                "e like 'CREDITO -%' and ITEMNAME LIKE '%- id-OS%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"upda"& _ 
+                "te onbase set Documento= 'CURP DEL CLIENTE' where itemname like 'CREDITO -%' and"& _ 
+                " ITEMNAME LIKE '%- CURP %' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= "& _ 
+                "'CURP ACREDITADO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-A%"& _ 
+                "' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CURP REPRESENTATE LEGAL'"& _ 
+                " where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-RL%' and Documento "& _ 
+                "is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'CURP OBIGADO SOLIDARIO Y AVAL' where ite"& _ 
+                "mname like 'CREDITO -%' and ITEMNAME LIKE '%- CURP-OS%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'COMPROBANTE DE DOMICILIO CLIENTE' where itemname"& _ 
+                " like 'CREDITO -%' and ITEMNAME LIKE '%- CD %' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update on"& _ 
+                "base set Documento= 'COMPROBANTE DE DOMICILIO ACREDITADO' where itemname like 'C"& _ 
+                "REDITO -%' and ITEMNAME LIKE '%- CD-A%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase se"& _ 
+                "t Documento= 'COMPROBANTE DE DOMICILIO REPRESENTANTE LEGAL' where itemname like "& _ 
+                "'CREDITO -%' and ITEMNAME LIKE '%- CD-RL%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase"& _ 
+                " set Documento= 'COMPROBANTE DE DOMICILIO OBIGADO SOLIDARIO Y AVAL' where itemna"& _ 
+                "me like 'CREDITO -%' and ITEMNAME LIKE '%- CD-OS%' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"upd"& _ 
+                "ate onbase set Documento= 'AUTORIZACION' where itemname like 'CREDITO -%' and IT"& _ 
+                "EMNAME LIKE '%- AUT %' and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'SOL"& _ 
                 "ICITUD DE CREDITO' where itemname like 'CREDITO -%' and ITEMNAME LIKE '%- SOLF%'"& _ 
                 " and Documento is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set Documento= 'REPORTE DE VISITA' where "& _ 
                 "itemname like 'CREDITO -%' and ITEMNAME LIKE '%- RPT VIST%' and Documento is nul"& _ 

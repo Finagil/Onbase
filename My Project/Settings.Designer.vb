@@ -77,6 +77,42 @@ Namespace My
                 Me("RutaOrigen") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("smtp85.cmoderna.com")>  _
+        Public Property SMTP() As String
+            Get
+                Return CType(Me("SMTP"),String)
+            End Get
+            Set
+                Me("SMTP") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("26")>  _
+        Public Property SMTP_PORT() As String
+            Get
+                Return CType(Me("SMTP_PORT"),String)
+            End Get
+            Set
+                Me("SMTP_PORT") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ecacerest,c4c3r1t0s,cmoderna")>  _
+        Public Property SMTP_CREDEN() As String
+            Get
+                Return CType(Me("SMTP_CREDEN"),String)
+            End Get
+            Set
+                Me("SMTP_CREDEN") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
