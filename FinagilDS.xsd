@@ -177,6 +177,20 @@ update onbase set Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO 
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos" Modifier="Public" Name="UpdateLlenaDatos" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateLlenaDatos">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>update OnBase set Area = 'Credito', Anexo = '000000000' where itemname like 'Credito%' and area is null;
+update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))))) where Area = 'Credito' and nombre is null;
+update OnBase set Area = 'Mesa de Control' where itemname like 'Mesa de %' and area is null;
+update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,9)  where Area = 'Mesa de Control' and nombre is null;
+update OnBase set Area = 'Contratos' where itemname like 'Contratos%' and area is null ;
+update OnBase set Area = 'Supervision Fira' where itemname like 'Supervision Fira%' and area is null ;
+update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,9)  where Area = 'Supervision Fira' and nombre is null;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
         </Tables>

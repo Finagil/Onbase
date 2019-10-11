@@ -1017,7 +1017,7 @@ Namespace FinagilDSTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        itemnum, itemname, itemdate, itempagenum, filepath, id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
@@ -1133,6 +1133,46 @@ Namespace FinagilDSTableAdapters
                 "Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO -%' and ITEMNAME L"& _ 
                 "IKE '%- EDO FIN%' and Documento is null;"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "update OnBase set Area = 'Credito', Anexo = '000000000' where itemname like 'Cred"& _ 
+                "ito%' and area is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRI"& _ 
+                "NG(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUB"& _ 
+                "STRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemna"& _ 
+                "me,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRIN"& _ 
+                "G(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(item"& _ 
+                "name,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charinde"& _ 
+                "x('-',itemname)+1,len(itemname)))))))) where Area = 'Credito' and nombre is null"& _ 
+                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Area = 'Mesa de Control' where itemname like 'Mesa de %' an"& _ 
+                "d area is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBST"& _ 
+                "RING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(i"& _ 
+                "temname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,chari"& _ 
+                "ndex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemna"& _ 
+                "me,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,cha"& _ 
+                "rindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',it"& _ 
+                "emname)+1,len(itemname)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(itemname,c"& _ 
+                "harindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charind"& _ 
+                "ex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemna"& _ 
+                "me)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',"& _ 
+                "itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemna"& _ 
+                "me)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(ite"& _ 
+                "mname)))))+2,9)  where Area = 'Mesa de Control' and nombre is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBa"& _ 
+                "se set Area = 'Contratos' where itemname like 'Contratos%' and area is null ;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"u"& _ 
+                "pdate OnBase set Area = 'Supervision Fira' where itemname like 'Supervision Fira"& _ 
+                "%' and area is null ;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING"& _ 
+                "(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBST"& _ 
+                "RING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname"& _ 
+                ",charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING("& _ 
+                "itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemna"& _ 
+                "me,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex("& _ 
+                "'-',itemname)+1,len(itemname)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(item"& _ 
+                "name,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,c"& _ 
+                "harindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',"& _ 
+                "itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charinde"& _ 
+                "x('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',"& _ 
+                "itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,l"& _ 
+                "en(itemname)))))+2,9)  where Area = 'Supervision Fira' and nombre is null;"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1449,6 +1489,28 @@ Namespace FinagilDSTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
         Public Overloads Overridable Function UpdateDocumentos() As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateLlenaDatos() As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
