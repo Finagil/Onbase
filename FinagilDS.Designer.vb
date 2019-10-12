@@ -1178,7 +1178,8 @@ Namespace FinagilDSTableAdapters
                 "e,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('"& _ 
                 "-',itemname)+1,len(itemname)))))+2,8)))  where Area = 'Supervision Fira' and nom"& _ 
                 "bre is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set anexo = RTRIM(LTRIM(replace(Anexo,'-',''))) wher"& _ 
-                "e anexo like '%-%';"
+                "e anexo like '%-%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set anexo = CONVERT(int,Anexo) where Area= 'c"& _ 
+                "redito' and anexo like '0%';"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

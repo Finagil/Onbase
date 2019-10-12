@@ -73,6 +73,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FinagilDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FinagilDS.vb">
+      <DependentUpon>FinagilDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OnBase.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
