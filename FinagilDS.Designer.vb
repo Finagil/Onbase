@@ -1142,41 +1142,43 @@ Namespace FinagilDSTableAdapters
                 "me,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRIN"& _ 
                 "G(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(item"& _ 
                 "name,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charinde"& _ 
-                "x('-',itemname)+1,len(itemname)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(it"& _ 
-                "emname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname"& _ 
-                ",charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-"& _ 
-                "',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charin"& _ 
-                "dex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-"& _ 
-                "',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1"& _ 
-                ",len(itemname)))))+2,5)  where Area = 'Credito' and nombre is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBa"& _ 
-                "se set Area = 'Mesa de Control' where itemname like 'Mesa de %' and area is null"& _ 
-                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,"& _ 
-                "charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charin"& _ 
-                "dex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemn"& _ 
-                "ame)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('"& _ 
-                "-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',ite"& _ 
-                "mname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len("& _ 
-                "itemname)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',i"& _ 
-                "temname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemnam"& _ 
-                "e)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(item"& _ 
-                "name)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,le"& _ 
-                "n(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(item"& _ 
-                "name)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,8"& _ 
-                ")  where Area = 'Mesa de Control' and nombre is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Area = "& _ 
-                "'Supervision Fira' where itemname like 'Supervision Fira%' and area is null ;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"u"& _ 
-                "pdate OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,char"& _ 
-                "index('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex("& _ 
-                "'-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)"& _ 
-                "+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',i"& _ 
-                "temname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemnam"& _ 
-                "e)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(item"& _ 
-                "name)))))))), Anexo = SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemn"& _ 
-                "ame)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1"& _ 
-                ",len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname"& _ 
-                ")))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(it"& _ 
-                "emname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname"& _ 
-                ")))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,8)  w"& _ 
-                "here Area = 'Supervision Fira' and nombre is null;"
+                "x('-',itemname)+1,len(itemname)))))))), Anexo = RTRIM(LTRIM(SUBSTRING(SUBSTRING("& _ 
+                "SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTR"& _ 
+                "ING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,"& _ 
+                "charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(ite"& _ 
+                "mname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,"& _ 
+                "charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-'"& _ 
+                ",itemname)+1,len(itemname)))))+2,5)))  where Area = 'Credito' and nombre is null"& _ 
+                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Area = 'Mesa de Control' where itemname like 'Mesa de %' an"& _ 
+                "d area is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBST"& _ 
+                "RING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(i"& _ 
+                "temname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,chari"& _ 
+                "ndex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemna"& _ 
+                "me,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,cha"& _ 
+                "rindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',it"& _ 
+                "emname)+1,len(itemname)))))))), Anexo = RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRIN"& _ 
+                "G(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(item"& _ 
+                "name,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charinde"& _ 
+                "x('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,ch"& _ 
+                "arindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charinde"& _ 
+                "x('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemnam"& _ 
+                "e)+1,len(itemname)))))+2,8)))  where Area = 'Mesa de Control' and nombre is null"& _ 
+                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Area = 'Supervision Fira' where itemname like 'Supervision "& _ 
+                "Fira%' and area is null ;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBST"& _ 
+                "RING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',S"& _ 
+                "UBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(item"& _ 
+                "name,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTR"& _ 
+                "ING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(it"& _ 
+                "emname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charin"& _ 
+                "dex('-',itemname)+1,len(itemname)))))))), Anexo = RTRIM(LTRIM(SUBSTRING(SUBSTRIN"& _ 
+                "G(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBS"& _ 
+                "TRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemnam"& _ 
+                "e,charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(i"& _ 
+                "temname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemnam"& _ 
+                "e,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('"& _ 
+                "-',itemname)+1,len(itemname)))))+2,8)))  where Area = 'Supervision Fira' and nom"& _ 
+                "bre is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set anexo = RTRIM(LTRIM(replace(Anexo,'-',''))) wher"& _ 
+                "e anexo like '%-%';"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
