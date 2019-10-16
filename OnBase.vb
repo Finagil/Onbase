@@ -100,9 +100,16 @@ Module OnBase
                 ta.Insert(r.itemnum, r.itemname, r.itemdate, r.itempagenum, r.filepath)
                 Console.WriteLine(r.itemnum)
             Next
+            Console.WriteLine("Borrando archivos de no imagenes")
             ta.DeleteNoImagenes()
+            Console.WriteLine("Actualiza Documentos")
             ta.UpdateDocumentos()
-            ta.UpdateLlenaDatos()
+            Console.WriteLine("Actualiza Datos 1")
+            ta.UpdateLlenaDatos1()
+            Console.WriteLine("Actualiza Datos 2")
+            ta.UpdateLlenaDatos2()
+            Console.WriteLine("Actualiza Datos 3")
+            ta.UpdateLlenaDatos3()
         Catch ex As Exception
             EnviaError("Ecacerest@lamoderna.com.mx", ex.Message, "error de Onbase")
         End Try
