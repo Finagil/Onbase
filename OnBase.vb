@@ -88,6 +88,7 @@ Module OnBase
             Dim taOnBase As New OnBaseDSTableAdapters.DatosOnBaseTableAdapter
             Dim ta As New FinagilDSTableAdapters.OnBaseTableAdapter
             Dim t As New OnBaseDS.DatosOnBaseDataTable
+            ta.TimeOuts = 120
             If Todo = True Then
                 ta.DeleteTODO()
                 taOnBase.FillByTODO(t)
