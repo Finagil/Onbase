@@ -105,6 +105,8 @@ Module OnBase
             ta.DeleteNoImagenes()
             Console.WriteLine("Actualiza Documentos")
             ta.UpdateDocumentos()
+            Console.WriteLine("Actualiza Datos 0")
+            ta.UpdateLlenaDatos0()
             Console.WriteLine("Actualiza Datos 1")
             ta.UpdateLlenaDatos1()
             Console.WriteLine("Actualiza Datos 2")

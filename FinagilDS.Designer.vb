@@ -1017,7 +1017,7 @@ Namespace FinagilDSTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(7) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(9) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        itemnum, itemname, itemdate, itempagenum, filepath, id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
@@ -1135,7 +1135,34 @@ Namespace FinagilDSTableAdapters
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "update OnBase set Area = 'Credito', Anexo = '000000000' where itemname like 'Cred"& _ 
+            Me._commandCollection(5).CommandText = "update onbase set itemname = replace(itemname,'FLO-SAN','FLO SAN') where itemname"& _ 
+                " like '%FLO-SAN%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'AGRI-TEC','AG"& _ 
+                "RI TEC') where itemname like '%AGRI-TEC%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace"& _ 
+                "(itemname,'VEGA-ALBELA','VEGA ALBELA') where itemname like '%VEGA-ALBELA%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"upd"& _ 
+                "ate onbase set itemname = replace(itemname,'MEXICO-COYOTEPEC','MEXICO COYOTEPEC'"& _ 
+                ") where itemname like '%MEXICO-COYOTEPEC%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replac"& _ 
+                "e(itemname,'MEXICO-TEPELTITLN','MEXICO TEPELTITLN') where itemname like '%MEXICO"& _ 
+                "-TEPELTITLN%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'BBM-CPG','BBM CPG"& _ 
+                "') where itemname like '%BBM-CPG%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemna"& _ 
+                "me,'EQ-LEASING','EQ LEASING') where itemname like '%EQ-LEASING%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase"& _ 
+                " set itemname = replace(itemname,'ETIQUE-EXPRESS','ETIQUE EXPRESS') where itemna"& _ 
+                "me like '%ETIQUE-EXPRESS%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'NERI"& _ 
+                "-GON','NERI GON') where itemname like '%NERI-GON%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname "& _ 
+                "= replace(itemname,'MCGRAW-HILL','MCGRAW HILL') where itemname like '%MCGRAW-HIL"& _ 
+                "L%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'AZTE-KA','AZTE KA') where i"& _ 
+                "temname like '%AZTE-KA%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'FLEX-A"& _ 
+                "RC','FLEX ARC') where itemname like '%FLEX-ARC%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = "& _ 
+                "replace(itemname,'RAM-S','RAM S') where itemname like '%RAM-S%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase "& _ 
+                "set itemname = replace(itemname,'SUB-URBANOS','SUB URBANOS') where itemname like"& _ 
+                " '%SUB-URBANOS%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'MEX-CUAU-MELCH"& _ 
+                "OR O-ZGO','MEX CUAU MELCHOR O ZGO') where itemname like '%MEX-CUAU-MELCHOR O-ZGO"& _ 
+                "%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'TRANS-MEX','TRANS MEX') wher"& _ 
+                "e itemname like '%TRANS-MEX%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update onbase set itemname = replace(itemname,'A"& _ 
+                "L-MED','AL MED') where itemname like '%AL-MED%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(6).Connection = Me.Connection
+            Me._commandCollection(6).CommandText = "update OnBase set Area = 'Credito', Anexo = '000000000' where itemname like 'Cred"& _ 
                 "ito%' and area is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRI"& _ 
                 "NG(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUB"& _ 
                 "STRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemna"& _ 
@@ -1149,11 +1176,11 @@ Namespace FinagilDSTableAdapters
                 "mname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,"& _ 
                 "charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-'"& _ 
                 ",itemname)+1,len(itemname)))))+2,5)))  where Area = 'Credito' and nombre is null"& _ 
-                ";"
-            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "update OnBase set Area = 'Mesa de Control' where itemname like 'Mesa de %' and ar"& _ 
+                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Anexo = REPLACE(Anexo,'-','') where Anexo like '%-%';"
+            Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(7).Connection = Me.Connection
+            Me._commandCollection(7).CommandText = "update OnBase set Area = 'Mesa de Control' where itemname like 'Mesa de %' and ar"& _ 
                 "ea is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING"& _ 
                 "(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemn"& _ 
                 "ame,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex"& _ 
@@ -1167,10 +1194,10 @@ Namespace FinagilDSTableAdapters
                 "dex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-"& _ 
                 "',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1"& _ 
                 ",len(itemname)))))+2,8)))  where Area = 'Mesa de Control' and nombre is null;"
-            Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(7).Connection = Me.Connection
-            Me._commandCollection(7).CommandText = "update OnBase set Area = 'Supervision Fira' where itemname like 'Supervision Fira"& _ 
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(8) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(8).Connection = Me.Connection
+            Me._commandCollection(8).CommandText = "update OnBase set Area = 'Supervision Fira' where itemname like 'Supervision Fira"& _ 
                 "%' and area is null ;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING"& _ 
                 "(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBST"& _ 
                 "RING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname"& _ 
@@ -1187,7 +1214,14 @@ Namespace FinagilDSTableAdapters
                 "is null;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set anexo = RTRIM(LTRIM(replace(Anexo,'-',''))) where an"& _ 
                 "exo like '%-%';"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set anexo = CONVERT(int,Anexo) where Area= 'credi"& _ 
                 "to' and anexo like '0%';"
-            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(8).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(9) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(9).Connection = Me.Connection
+            Me._commandCollection(9).CommandText = "update OnBase set Anexo = SUBSTRING(Anexo,0,charindex('-',Anexo)-1) where Anexo l"& _ 
+                "ike '%-%';  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Anexo = REPLACE(Anexo,'|','') where Anexo like '"& _ 
+                "%|%'; "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"update OnBase set Anexo = REPLACE(Anexo,'/','') where Anexo like '%/%'; "& _ 
+                ""
+            Me._commandCollection(9).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1524,7 +1558,7 @@ Namespace FinagilDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function UpdateLlenaDatos1() As Integer
+        Public Overloads Overridable Function UpdateLlenaDatos0() As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1546,7 +1580,7 @@ Namespace FinagilDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function UpdateLlenaDatos2() As Integer
+        Public Overloads Overridable Function UpdateLlenaDatos1() As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(6)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1568,8 +1602,52 @@ Namespace FinagilDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function UpdateLlenaDatos3() As Integer
+        Public Overloads Overridable Function UpdateLlenaDatos2() As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(7)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateLlenaDatos3() As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(8)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateLlenaDatos4() As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(9)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

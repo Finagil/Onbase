@@ -177,16 +177,42 @@ update onbase set Documento= 'ESTADOS FINANCIEROS' where itemname like 'CREDITO 
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos1" Modifier="Public" Name="UpdateLlenaDatos1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateLlenaDatos1">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos0" Modifier="Public" Name="UpdateLlenaDatos0" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateLlenaDatos0">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>update OnBase set Area = 'Credito', Anexo = '000000000' where itemname like 'Credito%' and area is null;
-update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))))), Anexo = RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,5)))  where Area = 'Credito' and nombre is null;</CommandText>
+                    <CommandText>update onbase set itemname = replace(itemname,'FLO-SAN','FLO SAN') where itemname like '%FLO-SAN%';
+update onbase set itemname = replace(itemname,'AGRI-TEC','AGRI TEC') where itemname like '%AGRI-TEC%';
+update onbase set itemname = replace(itemname,'VEGA-ALBELA','VEGA ALBELA') where itemname like '%VEGA-ALBELA%';
+update onbase set itemname = replace(itemname,'MEXICO-COYOTEPEC','MEXICO COYOTEPEC') where itemname like '%MEXICO-COYOTEPEC%';
+update onbase set itemname = replace(itemname,'MEXICO-TEPELTITLN','MEXICO TEPELTITLN') where itemname like '%MEXICO-TEPELTITLN%';
+update onbase set itemname = replace(itemname,'BBM-CPG','BBM CPG') where itemname like '%BBM-CPG%';
+update onbase set itemname = replace(itemname,'EQ-LEASING','EQ LEASING') where itemname like '%EQ-LEASING%';
+update onbase set itemname = replace(itemname,'ETIQUE-EXPRESS','ETIQUE EXPRESS') where itemname like '%ETIQUE-EXPRESS%';
+update onbase set itemname = replace(itemname,'NERI-GON','NERI GON') where itemname like '%NERI-GON%';
+update onbase set itemname = replace(itemname,'MCGRAW-HILL','MCGRAW HILL') where itemname like '%MCGRAW-HILL%';
+update onbase set itemname = replace(itemname,'AZTE-KA','AZTE KA') where itemname like '%AZTE-KA%';
+update onbase set itemname = replace(itemname,'FLEX-ARC','FLEX ARC') where itemname like '%FLEX-ARC%';
+update onbase set itemname = replace(itemname,'RAM-S','RAM S') where itemname like '%RAM-S%';
+update onbase set itemname = replace(itemname,'SUB-URBANOS','SUB URBANOS') where itemname like '%SUB-URBANOS%';
+update onbase set itemname = replace(itemname,'MEX-CUAU-MELCHOR O-ZGO','MEX CUAU MELCHOR O ZGO') where itemname like '%MEX-CUAU-MELCHOR O-ZGO%';
+update onbase set itemname = replace(itemname,'TRANS-MEX','TRANS MEX') where itemname like '%TRANS-MEX%';
+update onbase set itemname = replace(itemname,'AL-MED','AL MED') where itemname like '%AL-MED%';
+</CommandText>
                     <Parameters />
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos2" Modifier="Public" Name="UpdateLlenaDatos2" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateLlenaDatos2">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos1" Modifier="Public" Name="UpdateLlenaDatos1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateLlenaDatos1">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>update OnBase set Area = 'Credito', Anexo = '000000000' where itemname like 'Credito%' and area is null;
+update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))))), Anexo = RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,5)))  where Area = 'Credito' and nombre is null;
+update OnBase set Anexo = REPLACE(Anexo,'-','') where Anexo like '%-%';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos2" Modifier="Public" Name="UpdateLlenaDatos2" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="UpdateLlenaDatos2">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>update OnBase set Area = 'Mesa de Control' where itemname like 'Mesa de %' and area is null;
@@ -195,13 +221,23 @@ update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,cha
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos3" Modifier="Public" Name="UpdateLlenaDatos3" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="UpdateLlenaDatos3">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos3" Modifier="Public" Name="UpdateLlenaDatos3" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="UpdateLlenaDatos3">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>update OnBase set Area = 'Supervision Fira' where itemname like 'Supervision Fira%' and area is null ;
 update OnBase set Nombre =RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),0,charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))))), Anexo = RTRIM(LTRIM(SUBSTRING(SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))),charindex('-',SUBSTRING(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)),charindex('-',SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))+1,len(SUBSTRING(itemname,charindex('-',itemname)+1,len(itemname)))))+2,8)))  where Area = 'Supervision Fira' and nombre is null;
 update OnBase set anexo = RTRIM(LTRIM(replace(Anexo,'-',''))) where anexo like '%-%';
 update OnBase set anexo = CONVERT(int,Anexo) where Area= 'credito' and anexo like '0%';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLlenaDatos4" Modifier="Public" Name="UpdateLlenaDatos4" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="UpdateLlenaDatos4">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>update OnBase set Anexo = SUBSTRING(Anexo,0,charindex('-',Anexo)-1) where Anexo like '%-%';  
+update OnBase set Anexo = REPLACE(Anexo,'|','') where Anexo like '%|%'; 
+update OnBase set Anexo = REPLACE(Anexo,'/','') where Anexo like '%/%'; </CommandText>
                     <Parameters />
                   </DbCommand>
                 </UpdateCommand>
