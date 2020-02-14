@@ -17,5 +17,11 @@
     <Setting Name="SMTP_CREDEN" Type="System.String" Scope="User">
       <Value Profile="(Default)">ecacerest,c4c3r1t0s,cmoderna</Value>
     </Setting>
+    <Setting Name="RutaTmpOrg" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\SERVER-RAID2\TmpFinagil\</Value>
+    </Setting>
+    <Setting Name="RutaTmpDest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\SERVER-NAS\TMPFINAGIL\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
