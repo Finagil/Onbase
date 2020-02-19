@@ -112,7 +112,9 @@ Module OnBase
             If ficheros.Length > 0 Then
                 For Each f As String In ficheros
                     'copia los archivos
-                    'If InStr(UCase(f), ".JPG") > 0 Or InStr(UCase(f), ".TIF") > 0 Or InStr(UCase(f), ".PDF") > 0 Then
+                    If InStr(UCase(f), ".ID") > 0 Then
+                        Continue For
+                    End If
                     rr = RutaNueva & Mid(f, LargoR, f.Length)
                     If Not File.Exists(rr) Then
                         File.Copy(f, rr, True)
@@ -132,4 +134,5 @@ Module OnBase
             EnviaError("Ecacerest@lamoderna.com.mx", ex.Message, "Error de Onbase " & Date.Now)
         End Try
     End Sub
+
 End Module
