@@ -14,7 +14,7 @@ Module OnBase
                     LLenaSQL(True)
             End Select
             recursivoDirTMP(My.Settings.RutaOrigen, My.Settings.RutaDestino)
-            recursivoDirTMP(My.Settings.RutaTmpOrg, My.Settings.RutaTmpDest)
+            'recursivoDirTMP(My.Settings.RutaTmpOrg, My.Settings.RutaTmpDest)
         End If
 
         Dim fecha2 As Date = Date.Now
