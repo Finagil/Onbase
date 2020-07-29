@@ -58,7 +58,7 @@ Module OnBase
             Console.WriteLine("Actualiza Datos 3")
             ta.UpdateLlenaDatos3()
         Catch ex As Exception
-            EnviaError("Ecacerest@lamoderna.com.mx", ex.Message, "error de Onbase")
+            EnviaError("ecacerest@cmoderna.com.mx", ex.Message, "error de Onbase")
         End Try
     End Sub
 
